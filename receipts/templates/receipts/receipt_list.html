@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %} {% block content %}
+<h2>Receipt List</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Store Name</th>
+      <th>Date of Purchase</th>
+      <th>Total Amount</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for receipt in receipts %}
+    <tr>
+      <td>{{ receipt.store_name }}</td>
+      <td>{{ receipt.date_of_purchase }}</td>
+      <td>{{ receipt.total_amount }}</td>
+      <td>
+        <a class="btn btn-info" href="{% url 'receipt_detail' pk=receipt.pk %}"
+          >View</a
+        >
+        <a class="btn btn-warning" href="{% url 'receipt_edit' pk=receipt.pk %}"
+          >Edit</a
+        >
+        <a
+          class="btn btn-danger"
+          href="{% url 'receipt_delete' pk=receipt.pk %}"
+          >Delete</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<a class="btn btn-primary" href="{% url 'receipt_new' %}">Add Receipt</a>
+{% endblock %}

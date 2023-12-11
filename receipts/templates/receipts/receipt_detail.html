@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %} {% block content %}
+<h2>{{ receipt.store_name }} - {{ receipt.date_of_purchase }}</h2>
+<p><strong>Store Name:</strong> {{ receipt.store_name }}</p>
+<p><strong>Date of Purchase:</strong> {{ receipt.date_of_purchase }}</p>
+<p><strong>Item List:</strong> {{ receipt.item_list }}</p>
+<p><strong>Total Amount:</strong> {{ receipt.total_amount }}</p>
+<a class="btn btn-primary" href="{% url 'receipt_list' %}"
+  >Back to Receipt List</a
+>
+{% endblock %}

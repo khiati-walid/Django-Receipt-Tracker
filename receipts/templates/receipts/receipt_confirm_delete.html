@@ -1,0 +1,9 @@
+{% extends 'base/base.html' %} {% block content %}
+<h2>Confirm Deletion</h2>
+<p>Are you sure you want to delete the receipt "{{ receipt.store_name }}"?</p>
+<form method="post" style="display: inline">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger">Yes, delete</button>
+</form>
+<a class="btn btn-secondary" href="{% url 'receipt_list' %}">Cancel</a>
+{% endblock %}
