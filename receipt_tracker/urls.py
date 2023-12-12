@@ -6,5 +6,5 @@ urlpatterns = [
     path(
         "accounts/", include("django.contrib.auth.urls")
     ),  # For built-in authentication views
-    path("receipts/", include("receipts.urls")),
+    path("", include("receipts.urls")),
 ]
