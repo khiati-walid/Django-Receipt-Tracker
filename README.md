@@ -92,4 +92,9 @@ python manage.py test
 
 ## Deployment
 
-This section will be updated with deployment instructions once the application is ready for deployment.
+The live version of the website can be accessed at [http://walidkhiati.pythonanywhere.com/](http://walidkhiati.pythonanywhere.com/).
+
+You can either register a new user or use the existing staff user:
+
+- **Username:** rairon
+- **Password:** 111
